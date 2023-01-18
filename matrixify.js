@@ -18,10 +18,7 @@ const updateMessage = function (message, index) {
   elementToAppendText.innerHTML = text;
 };
 
-const appendLettersRecursively = async function (
-  message,
-  currentLetterIndex = 0
-) {
+const appendLetters = async function (message, currentLetterIndex = 0) {
   return new Promise((resolve) => {
     const messageLength = message.length;
     let updateMessageTimeout = null;
@@ -41,7 +38,7 @@ const appendLettersRecursively = async function (
   });
 };
 
-const removeLettersRecursively = async function (message) {
+const removeLetters = async function (message) {
   return new Promise((resolve) => {
     let currentLetterIndex = message.length;
     let updateMessageTimeout = null;
@@ -63,7 +60,9 @@ const removeLettersRecursively = async function (message) {
 
 const matrixify = async function () {
   for (const [index, message] of messages.entries()) {
-    await appendLettersRecursively(message);
+    await watingTime(600);
+
+    await appendLetters(message);
 
     if (index === messages.length - 1) {
       await watingTime(5000);
@@ -71,8 +70,7 @@ const matrixify = async function () {
       await watingTime(1000);
     }
 
-    await removeLettersRecursively(message);
-    await watingTime(600);
+    await removeLetters(message);
   }
 
   matrixify();

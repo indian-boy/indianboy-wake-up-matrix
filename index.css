@@ -31,6 +31,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: 35%;
   background-position-y: 35%;
+  animation: fadeInFull 0.6s;
 }
 
 #black_block_centered {
@@ -51,6 +52,7 @@ body {
   justify-content: center;
   align-items: center;
   transform: translateY(-50%);
+  animation: fadeInBlack 0.6s;
 }
 
 #black_block_centered:before {
@@ -81,6 +83,7 @@ body {
   justify-content: space-around;
   align-items: center;
   transform: translate(-50%);
+  animation: fadeInBlack 0.6s;
 }
 
 #github {
@@ -133,5 +136,23 @@ body {
     align-items: center;
     flex-direction: column;
     transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeInBlack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
+@keyframes fadeInFull {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
