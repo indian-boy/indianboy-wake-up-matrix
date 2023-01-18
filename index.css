@@ -1,0 +1,74 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: black;
+  font: normal 20px monospace;
+  color: #3f3;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/indian_boy_landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 35%;
+  background-position-y: 35%;
+}
+
+#black_block_centered {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  max-width: calc(100% - 32px);
+  height: 90px;
+  background: #101010 linear-gradient(-90deg, #101010 2px, transparent 2px);
+  background-size: 1px 2px;
+  box-shadow: 0 0 0 2px #191919;
+  padding: 24px;
+  z-index: 0;
+  margin: 16px;
+  opacity: 0.95;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  #black_block_centered {
+    width: calc(60% - 32px);
+    max-width: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 140px;
+  }
+}
+
+#black_block_centered:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
