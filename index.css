@@ -44,23 +44,13 @@ body {
   box-shadow: 0 0 0 2px #191919;
   padding: 24px;
   z-index: 0;
-  margin: 16px;
+  margin: 0 16px;
   opacity: 0.95;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   transform: translateY(-50%);
-}
-
-@media (min-width: 768px) {
-  #black_block_centered {
-    width: calc(60% - 32px);
-    max-width: 600px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 140px;
-  }
 }
 
 #black_block_centered:before {
@@ -71,4 +61,77 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+#links_block {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 400px;
+  height: 80px;
+  background: #101010 linear-gradient(-90deg, #101010 2px, transparent 2px);
+  background-size: 1px 2px;
+  box-shadow: 0 0 0 2px #191919;
+  padding: 24px;
+  z-index: 0;
+  opacity: 0.95;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(-50%);
+}
+
+#github {
+  height: 32px;
+  width: 32px;
+}
+
+#linkedin {
+  height: 30px;
+  width: 30px;
+}
+
+#devto {
+  height: 30px;
+  width: 30px;
+}
+
+#twitter {
+  height: 30px;
+  width: 30px;
+}
+
+@media (min-width: 768px) {
+  #black_block_centered {
+    width: calc(60% - 32px);
+    max-width: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 140px;
+  }
+
+  #links_block {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    bottom: unset;
+    left: unset;
+    width: 80px;
+    max-height: 400px;
+    height: 100%;
+    background: #101010 linear-gradient(-90deg, #101010 2px, transparent 2px);
+    background-size: 1px 2px;
+    box-shadow: 0 0 0 2px #191919;
+    padding: 24px;
+    z-index: 0;
+    opacity: 0.95;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-50%);
+  }
 }
