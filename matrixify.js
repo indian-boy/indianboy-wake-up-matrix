@@ -1,9 +1,10 @@
 const elementToAppendText = document.getElementById("text");
 const messages = [
-  "wake up...",
-  "wake up...",
-  "the matrix has you!",
-  "follow the white rabbit.",
+  "Wake up...",
+  "Wake up...",
+  "The matrix has you!",
+  "Follow the white rabbit.",
+  "Knock, knock...",
 ];
 const appendLettersSpeed = 75;
 const removeLettersSpeed = 30;
